@@ -1,6 +1,6 @@
 id = "io.viewerly.guard"
 name = "Guard"
-version = "1.0.0"
+version = "0.1.0"
 viewerly = ">=0.2"
 description = "Answers the permission requests nobody is looking at, by rules you set: tools you always allow are allowed, Bash commands containing a phrase you name are denied, everything else waits for you. Counts what it decided."
 

@@ -54,7 +54,7 @@ Download `io.viewerly.guard-<version>.vplugin` from the
 [releases](https://github.com/viewerly/plugin-guard/releases), then:
 
 - **Settings › Plugins › Install from File…**, or
-- `viewerly plugin install io.viewerly.guard-1.0.0.vplugin`.
+- `viewerly plugin install io.viewerly.guard-0.1.0.vplugin`.
 
 Once it is listed in the directory, **Settings › Plugins › Browse Plugins…** installs it without a
 download. A plugin starts with nothing allowed; the grants sheet opens so you can choose.

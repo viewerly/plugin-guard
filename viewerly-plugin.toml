@@ -1,0 +1,15 @@
+id = "io.viewerly.guard"
+name = "Guard"
+version = "1.0.0"
+viewerly = ">=0.2"
+description = "Answers the permission requests nobody is looking at, by rules you set: tools you always allow are allowed, Bash commands containing a phrase you name are denied, everything else waits for you. Counts what it decided."
+
+[contributes]
+automation = "guard.wasm"
+ui = ["ui.toml"]
+
+[capabilities]
+events = ["permission.requested", "session.status", "session.exited"]
+permissions = "decide"
+rules = "Only answers a request when no window, phone or dashboard has the session open. Denies a Bash command that contains any phrase in “Deny Bash commands containing” (by default rm -rf); this is checked first. Allows a tool named in “Always allow tools” (by default Read, Glob, Grep and LS). Leaves everything else to you. Both lists are in Settings › Plugins › Guard; an empty field means its default, and “none” turns that rule off. Matching ignores case for tool names and extra spaces in commands, and is plain text: it is a safety net, not a sandbox."
+notify = true

@@ -1,0 +1,28 @@
+# Where Guard shows up. What the panel, status item and settings pane show after loading is
+# set by the automation (src/lib.rs); these are what they show before it has run.
+
+[[command]]
+id = "reset"
+title = "Guard: Reset Counts"
+
+[[status]]
+id = "guard"
+text = "Guard"
+
+[[action]]
+id = "explain"
+title = "Guard"
+
+[[panel]]
+id = "activity"
+title = "Guard"
+widgets = [{ type = "text", text = "Starting…" }]
+
+[[settings]]
+id = "rules"
+title = "Guard"
+widgets = [
+  { type = "markdown", text = "Guard answers permission requests **only when nobody is looking** at the session. Separate entries with commas. An empty field uses the default shown in it; type `none` to turn that rule off." },
+  { type = "field", id = "allow", label = "Always allow tools", placeholder = "Read, Glob, Grep, LS", secret = false },
+  { type = "field", id = "deny", label = "Deny Bash commands containing", placeholder = "rm -rf", secret = false },
+]
